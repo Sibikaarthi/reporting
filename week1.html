@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+     //1.basic syntax: variables,datatypes,and operators.
+//variables
+var data;
+let sum= 50;
+//datatypes
+let no=30;
+let boolean=true;
+let string="hello";
+let notdefined;
+let fruits=["apple","banana","mango","kiwi"]
+let objects={name:"ram",age:"33"}
+//operators
+let a = 3;
+let b = 4;
+let add = a + b; 
+let different = a - b;
+let product = a * b; 
+let quotient = a / b; 
+let remainder = a % b; 
+let increment=a++; 
+b--; 
+// console.log(increment)
+
+//assignment operators
+let j=15
+j=j+5
+// console.log(j)
+
+//comparison operators
+let c = 10;
+let d = 5;
+console.log(c == d); // false
+
+//logicaloperators
+let ram=true
+let ravi=true
+if(ram && ravi){
+    console.log(true)
+}
+//ternaryoperators
+let pi=3.14;
+let check=(pi>=3.15?"true":"false")
+console.log(check)//false
+
+//2.console.log()and alert()
+// alert("caution!")
+// console.log("caution!")
+// document.write("caution!")
+
+
+//conditional statement:if and elseif
+
+let student=75
+try{
+ if(student>100){
+   throw new Error("invalid!")
+     }else{
+        console.log("valid!")
+    }
+}catch(error){
+    console.log(error)
+}
+
+//loops 
+//forloops
+let array=[1,2,3,4,5,6,7,8,9]
+for (let index = 0; index < array.length; index++) {
+    const element = array[index]*2;
+    // console.log(element)
+    }
+//whileloop
+let x=10
+while(x>9){
+    console.log("welcome")
+    x--;
+}
+//dowhileloop
+let value=50;
+do{
+    console.log(value);
+    value++;
+}while (value>51) {
+    console.log(value)
+}
+
+//break and continue statement
+//break
+for (let i = 0; i < 10; i++) {
+  if (i == 7) {
+    console.log("it will break here even the condition is true ")
+    break; 
+  }
+  console.log(i);
+}
+
+//continue
+let numbers=[1,2,3,4,5,6,7,8,9]
+
+for (let index = 0; index < numbers.length; index++) {
+    if(numbers[index]%3==0){
+        continue;
+    }
+    else{
+        console.log(numbers[index])
+    }
+}
+
+ //functions
+ function sums(a,b){
+    let total=a+b
+    console.log(total)
+ }
+sums(15,5)
+//here i have declared a function with two parameters and with local variable total.
+//while calling the function i called as sums with argument.
+//here i called the value of a and b inside the function
+//because of local variable(total),if it is global variable we can call anywhere.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
