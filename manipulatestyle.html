@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.background{
+    background-color: rgb(226, 217, 43);
+}
+.border{
+    border: 5px solid rgb(6, 2, 2);
+}
+     </style>
+</head>
+<body>
+<p id="statement">changing dynamically the style</p>
+<button onclick="add()">add</button>
+<button onclick="toggle()">border</button>
+
+<script>
+let statement=document.getElementById('statement')
+
+       function add(){
+statement.classList.add('background');
+}
+
+       function toggle(){
+    statement.classList.toggle('border')
+}
+</script>
+</body>
+</html>
