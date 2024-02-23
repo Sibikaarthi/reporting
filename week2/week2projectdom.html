@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
 </head>
+
 <body>
     <div class="container">
         <h1>Click the button to change the background color!</h1>
@@ -13,24 +15,24 @@
     </div>
 
 
- <script>
-//building a simple interactive webpage using dom manipulation.
-let button=document.getElementById('btn');
-let body=document.querySelector("body");
-let hex =[1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
+    <script>
+        //building a simple interactive webpage using dom manipulation.
+        let button = document.getElementById('btn');
+        let body = document.querySelector("body");
+        let hex = [1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 
-function randomhexvalue(){
-    let ranindex=Math.floor(Math.random()*hex.length)
-    return  hex[ranindex]
-}
+        function randomhexvalue() {
+            let ranindex = Math.floor(Math.random() * hex.length)
+            return hex[ranindex]
+        }
 
-button.addEventListener('click',function(){
-let stringcolor='#';
-for (let i = 0; i <6; i++) {
-    stringcolor+=randomhexvalue();
-    }
-    body.style.backgroundColor=stringcolor;
-})
+        button.addEventListener('click', function () {
+            let stringcolor = '#';
+            for (let i = 0; i < 6; i++) {
+                stringcolor += randomhexvalue();
+            }
+            body.style.backgroundColor = stringcolor;
+        })
 
 
 
@@ -40,4 +42,5 @@ for (let i = 0; i <6; i++) {
 
     </script>
 </body>
+
 </html>

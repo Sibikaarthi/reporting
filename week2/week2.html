@@ -1,94 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .highlight{
+        .highlight {
             background-color: aqua;
         }
     </style>
 </head>
+
 <body>
 
     <div>
         <p id="para">this is a paragraph</p>
         <p id="paras"></p>
     </div>
-     <div >
+    <div>
 
-    <p class="pt">paragraph 1</p>
-    <p class="pt">paragraph 2</p>
-    <p class="pt">paragraph 3</p>
-     </div>
+        <p class="pt">paragraph 1</p>
+        <p class="pt">paragraph 2</p>
+        <p class="pt">paragraph 3</p>
+    </div>
 
-     <div>
+    <div>
         <button id="click">click</button>
-     </div>
+    </div>
 
-         <form id="myForm">
-             <input type="text" name="username" placeholder="Enter username">
-             <button type="submit">Submit</button>
-         </form>
+    <form id="myForm">
+        <input type="text" name="username" placeholder="Enter username">
+        <button type="submit">Submit</button>
+    </form>
 
-         <input type="text" id="myInput">
-         <p id="output">Input value will here</p>
-<script>
-//understanding the document object model(DOM)
-//getelementbyid
-let para=document.getElementById("para");
-let newtext="added new text here"
-para.innerText= para.innerText+" "+newtext;
+    <input type="text" id="myInput">
+    <p id="output">Input value will here</p>
+    <script>
+        //understanding the document object model(DOM)
+        //getelementbyid
+        let para = document.getElementById("para");
+        let newtext = "added new text here"
+        para.innerText = para.innerText + " " + newtext;
 
-//createelement
-let newpara=document.createElement("p");
-let text="new tag added as child";
-newpara.innerHTML=text
-document.getElementById("para").appendChild(newpara)
+        //createelement
+        let newpara = document.createElement("p");
+        let text = "new tag added as child";
+        newpara.innerHTML = text
+        document.getElementById("para").appendChild(newpara)
 
-//selecting elements using document.queryselector and document.query selectorAll
-//querryselector
-let singlepara=document.querySelector('.pt');
-console.log("firstpara:"+singlepara.textContent);
-//querryselectorAll
-let multiplepara=document.querySelectorAll('.pt');
-// console.log(multiplepara)
-let data=[];
-multiplepara.forEach(paragraph=>{
-    data.push(paragraph.textContent)
-})
-console.log(data)
+        //selecting elements using document.queryselector and document.query selectorAll
+        //querryselector
+        let singlepara = document.querySelector('.pt');
+        console.log("firstpara:" + singlepara.textContent);
+        //querryselectorAll
+        let multiplepara = document.querySelectorAll('.pt');
+        // console.log(multiplepara)
+        let data = [];
+        multiplepara.forEach(paragraph => {
+            data.push(paragraph.textContent)
+        })
+        console.log(data)
 
- //changing HTML content
-let element = document.getElementById('paras');
-element.innerHTML = '<strong>New HTML content</strong>';
+        //changing HTML content
+        let element = document.getElementById('paras');
+        element.innerHTML = '<strong>New HTML content</strong>';
 
-//event handling
-//handling user interaction with javascript
+        //event handling
+        //handling user interaction with javascript
 
-//clickevent
- let button = document.getElementById("click");
- button.addEventListener('click',function(){
-// console.log("button triggered!")
-button.classList.toggle('highlight')
- })
+        //clickevent
+        let button = document.getElementById("click");
+        button.addEventListener('click', function () {
+            // console.log("button triggered!")
+            button.classList.toggle('highlight')
+        })
 
-//submitevent
- const form = document.getElementById('myForm');
-        form.addEventListener('submit', function(event) {
+        //submitevent
+        const form = document.getElementById('myForm');
+        form.addEventListener('submit', function (event) {
             event.preventDefault();
-             console.log('Form submitted!');
+            console.log('Form submitted!');
         });
-//changeevent
-const input = document.getElementById('myInput');
+        //changeevent
+        const input = document.getElementById('myInput');
 
-input.addEventListener('change', function(event) {
-    console.log(event,"check")
-    const output = document.getElementById('output');
-    output.textContent = `Input value changed to: ${event.target.value}`;
-});
- 
-  </script>
+        input.addEventListener('change', function (event) {
+            console.log(event, "check")
+            const output = document.getElementById('output');
+            output.textContent = `Input value changed to: ${event.target.value}`;
+        });
+
+    </script>
 </body>
+
 </html>
